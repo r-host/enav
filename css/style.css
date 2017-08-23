@@ -1,0 +1,380 @@
+/*
+Template Name: E-NAVIGATION
+Author: 
+Author URI: 
+Version: 1.0
+*/
+/**
+ * Table of Contents:
+ *
+ * 1. - NORMALIZE CSS
+ * 2. - GLOBAL STYLES
+ *      2.1 - General Styles
+ *      2.2 - Text Color
+ *      2.3 - Anchor
+ *      2.4 - Heading and Paragraph
+ * 
+ * 3. - COMPONENTS
+ *      3.1 - Preloader  
+ *      3.2 - Buttons  
+ *      3.3 - Box Icon 1
+ *      3.4 - Box Icon 2
+ *      3.5 - Box Image 1
+ *      3.6 - Box Image 2
+ *      3.7 - Box Image 3
+ *      3.8 - BOX TESTIMONY
+ *      3.9 - Box Team 2
+ *      3.10 - Box Statistic
+ *      3.11 - Box History
+ *      3.12 - Box Partners
+ *      3.13 - Panel Accordion
+ *      3.14 - Faq
+ *      3.15 - Pricing Table
+ *      3.16 - Career Tabs
+ *      3.17 - Box News
+ * 4. - LOGO & NAVIGATION
+ *      4.1 - Topbar 
+ *      4.2 - Navbar 
+ * 5. - HOME
+ *      5.1 - Banner
+ *      5.2 - Text Typing
+ * 6. - SECTION
+ *      6.1 Section - About
+ *      6.2 Section - Services
+ *      6.3 Section - Projects
+ *      6.4 Section - News
+ *      6.5 Section - Contact
+ *      6.6 Section - Features
+ *      6.7 Section - CTA
+ *      6.8 Section - Price
+ *      6.9 Section - Blog
+ *      6.10 Section - Timeline
+ *      6.11 Section - Testimonial
+ *      6.12 Section - Clients
+ *      6.13 Section - Video BG
+ *      6.14 Section - Contact and Map
+ * 7. - FOOTER 
+ * 8. - RESPONSIVE
+ * -----------------------------------------------------------------------------
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+.bolder {
+  font-weight: 600; }
+
+.cfix {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both; }
+
+/**
+ * 1. - NORMALIZE CSS
+ * -----------------------------------------------------------------------------
+ */
+/* ==========================
+NORMALIZE
+============================= */
+/**
+ * Normalizing styles have been helped along thanks to the fine work of
+ * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+ */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: 700; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+code,
+kbd,
+pre,
+samp {
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+select {
+  text-transform: none; }
+
+button {
+  overflow: visible; }
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+  opacity: .5; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 0.4375em;
+  padding: 0; }
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-outer-spin-button,
+input[type="week"]::-webkit-inner-spin-button,
+input[type="week"]::-webkit-outer-spin-button,
+input[type="month"]::-webkit-inner-spin-button,
+input[type="month"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #d1d1d1;
+  margin: 0 0 1.75em;
+  min-width: inherit;
+  padding: 0.875em; }
+
+fieldset > :last-child {
+  margin-bottom: 0; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+optgroup {
+  font-weight: bold; }
+
+/**
+ * 2. CONTENT
+ * -----------------------------------------------------------------------------
+ */
+.main-wrap {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  display: block; }
+
+.left-btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  background-color: #fff;
+  font-size: 16px;
+  height: 30px;
+  margin: auto;
+  min-width: 30px;
+  width: 30px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+  position: relative;
+  line-height: normal; }
+
+.main-button-pos {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999; }
+
+.btn-main {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  background-color: #ff9501;
+  font-size: 24px;
+  height: 40px;
+  margin: auto;
+  min-width: 40px;
+  width: 40px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+  position: relative;
+  line-height: normal; }
+
+/* Maps */
+.maps-wraper {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.maps {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #ccc;
+  position: relative; }
+
+#google-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #fff; }
+
+#cd-google-map {
+  position: relative;
+  overflow: hidden; }
+
+#cd-google-map .col-md-12 {
+  padding: 0; }
+
+#cd-google-map .address {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 20px 0;
+  background-color: rgba(5, 5, 5, 0.9); }
+
+#cd-google-map .address .address-item {
+  position: relative;
+  padding-left: 44px; }
+
+#cd-google-map .address .address-item i {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: 4px;
+  color: #fcfcfc;
+  font-size: 22px;
+  text-align: center;
+  line-height: 24px; }
+
+#cd-zoom-in,
+#cd-zoom-out {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: #2E8ECE;
+  background-repeat: no-repeat;
+  background-size: 32px 64px;
+  background-image: url("../images/cd-icon-controller.svg"); }
+
+.no-touch #cd-zoom-in:hover,
+.no-touch #cd-zoom-out:hover {
+  background-color: #000000; }
+
+#cd-zoom-in {
+  background-position: 50% 0;
+  margin-top: 10px;
+  margin-bottom: 1px; }
+
+#cd-zoom-out {
+  background-position: 50% -32px; }
+
+/**
+ * 4. - RESPONSIVE
+ * -----------------------------------------------------------------------------
+ */
+
+/*# sourceMappingURL=style.css.map */
