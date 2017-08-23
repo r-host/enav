@@ -191,6 +191,14 @@ var map;
 			}
 		];
 
+		var locations = [
+	      ['Jalan Kwadengan Timur', -7.452775, 112.707371, 4],
+	      ['Wartel', -7.450816, 112.714203, 5],
+	      ['Kecamatan', -7.450243, 112.711669, 3],
+	      ['Toko Sinar Terang Baru', -7.452015, 112.715155, 2],
+	      ['Smile Clean', -7.449289, 112.706954, 1]
+	    ];
+
 		function CustomZoomControl(controlDiv, map) {
 			//grap the zoom elements from the DOM and insert them in the map
 			var controlUIzoomIn= document.getElementById('cd-zoom-in'),
@@ -226,12 +234,33 @@ var map;
 	        map = new google.maps.Map(document.getElementById('maps'), map_options);
 
 	        //add a custom marker to the map
-			var marker = new google.maps.Marker({
-				position: new google.maps.LatLng(latitude, longitude),
-				map: map,
-				visible: true,
-				icon: marker_url,
-			});
+			// var marker = new google.maps.Marker({
+			// 	position: new google.maps.LatLng(latitude, longitude),
+			// 	map: map,
+			// 	visible: true,
+			// 	icon: marker_url,
+			// });
+
+
+			var infowindow = new google.maps.InfoWindow();
+
+		    var marker, i;
+
+		    for (i = 0; i < locations.length; i++) {  
+		      marker = new google.maps.Marker({
+		        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+		        map: map,
+		        icon: marker_url
+		      });
+
+		      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		        return function() {
+		          infowindow.setContent(locations[i][0]);
+		          infowindow.open(map, marker);
+		        }
+		      })(marker, i));
+		    }
+
 
 			var zoomControlDiv = document.createElement('div');
 			var zoomControl = new CustomZoomControl(zoomControlDiv, map);
