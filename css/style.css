@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Template Name: E-NAVIGATION
 Author: 
@@ -252,8 +253,128 @@ optgroup {
  * 2. CONTENT
  * -----------------------------------------------------------------------------
  */
+@font-face {
+  font-family: "enav-webfont";
+  src: url("../fonts/enav-webfont.eot?51534236");
+  src: url("../fonts/enav-webfont.eot?51534236#iefix") format("embedded-opentype"), url("../fonts/enav-webfont.woff2?51534236") format("woff2"), url("../fonts/enav-webfont.woff?51534236") format("woff"), url("../fonts/enav-webfont.ttf?51534236") format("truetype"), url("../fonts/enav-webfont.svg?51534236#enav-webfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.enav {
+  font-family: "enav-webfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-enav-1:before {
+  content: '\e800'; }
+
+/* 'εáÇ' */
+.icon-enav-2:before {
+  content: '\e801'; }
+
+/* 'εáÇ' */
+.icon-enav-3:before {
+  content: '\e802'; }
+
+/* 'εáÇ' */
+.icon-enav-4:before {
+  content: '\e803'; }
+
+/* 'εáÇ' */
+.icon-enav-5:before {
+  content: '\e804'; }
+
+/* 'εáÇ' */
+.icon-enav-6:before {
+  content: '\e805'; }
+
+/* 'εáÇ' */
+.icon-enav-7:before {
+  content: '\e806'; }
+
+/* 'εáÇ' */
+.icon-enav-8:before {
+  content: '\e807'; }
+
+/* 'εáÇ' */
+.icon-enav-9:before {
+  content: '\e808'; }
+
+/* 'εáÇ' */
+.icon-enav-10:before {
+  content: '\e809'; }
+
+/* 'εáÇ' */
+.icon-enav-11:before {
+  content: '\e80a'; }
+
+/* 'εáÇ' */
+.icon-enav-12:before {
+  content: '\e80b'; }
+
+/* 'εáÇ' */
+.icon-enav-13:before {
+  content: '\e80c'; }
+
+/* 'εáÇ' */
+.icon-enav-14:before {
+  content: '\e80d'; }
+
+/* 'εáÇ' */
+.icon-enav-15:before {
+  content: '\e80e'; }
+
+/* 'εáÇ' */
+.icon-enav-16:before {
+  content: '\e80f'; }
+
+/* 'εáÇ' */
+.icon-enav-17:before {
+  content: '\e810'; }
+
+/* 'εáÇ' */
+.icon-enav-18:before {
+  content: '\e811'; }
+
+/* 'εáÇ' */
+.icon-enav-19:before {
+  content: '\e812'; }
+
+/* 'εáÇ' */
+.icon-enav-20:before {
+  content: '\e813'; }
+
+/* 'εáÇ' */
+.icon-enav-21:before {
+  content: '\e814'; }
+
+/* 'εáÇ' */
 a, a:focus, a:hover {
   color: #2d346a; }
+
+a.active {
+  color: #ff9501; }
 
 .main-wrap {
   position: relative;
@@ -345,7 +466,7 @@ a, a:focus, a:hover {
   right: 20px;
   z-index: 999; }
 
-.btn-orange, .btn-main, .dropdown-menu > li .fa {
+.btn-orange, .btn.btn-main, .dropdown-menu > li .enav {
   background-color: #ff9501;
   font-size: 24px;
   height: 40px;
@@ -359,14 +480,16 @@ a, a:focus, a:hover {
   position: relative;
   line-height: normal;
   color: #fff !important; }
-  .btn-orange:focus, .btn-main:focus, .dropdown-menu > li .fa:focus {
+  .btn-orange:focus, .btn.btn-main:focus, .dropdown-menu > li .enav:focus {
     background-color: #fff; }
 
-.btn-main {
+.btn.btn-main {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0; }
+  .btn.btn-main:focus {
+    background-color: #ff9501 !important; }
 
 .dropdown-menu {
   min-width: 320px;
@@ -383,7 +506,7 @@ a, a:focus, a:hover {
     text-align: right; }
     .dropdown-menu > li > a:hover {
       color: #ff9501; }
-  .dropdown-menu > li .fa {
+  .dropdown-menu > li .enav {
     text-align: center;
     padding-top: 6px;
     vertical-align: middle;
@@ -433,8 +556,20 @@ a.btn.btn-back {
   text-align: left;
   padding: 0;
   color: #fff; }
-  a.btn.btn-back .fa {
+  a.btn.btn-back .fa, a.btn.btn-back .enav {
     font-size: 40px; }
+  a.btn.btn-back span {
+    padding: 0 0 15px 5px;
+    display: inline-table;
+    vertical-align: middle; }
+
+.btn.right-btn {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  color: #fff; }
 
 .section-title {
   display: block;
@@ -496,10 +631,24 @@ a.btn.btn-back {
   color: #fff;
   padding-top: 10px;
   padding-bottom: 10px; }
+.modal-content .modal-body {
+  background-color: #e7e7e7; }
 
 .close {
   color: #fff;
   opacity: 1; }
+
+.modal-ket {
+  background-color: #fff;
+  padding: 10px 24px; }
+
+.echeck {
+  float: right;
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  margin: 0;
+  padding: 0; }
 
 .checkbox input[type=checkbox]:checked + .checkbox-material .check, label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check {
   color: #ff9501;
@@ -507,6 +656,41 @@ a.btn.btn-back {
 
 .checkbox input[type=checkbox]:checked + .checkbox-material .check:before, label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check:before {
   color: #ff9501; }
+
+.checkbox label, .radio label, label {
+  color: #666; }
+
+.checkbox, .radio {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.weather-is {
+  text-align: center; }
+  .weather-is li {
+    width: 50%;
+    float: left;
+    list-style: none;
+    padding: 80px 0; }
+    .weather-is li:first-child {
+      border-right: 1px solid #fff; }
+  .weather-is a {
+    color: #fff; }
+    .weather-is a:hover {
+      text-decoration: none; }
+  .weather-is .enav {
+    font-size: 150px; }
+  .weather-is span {
+    display: block;
+    font-size: 20px; }
+
+ul.datas {
+  margin: 0;
+  padding: 0; }
+  ul.datas li {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #b1b1b1; }
 
 /* Maps */
 .maps-wraper {
