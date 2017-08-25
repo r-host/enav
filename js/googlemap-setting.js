@@ -228,7 +228,7 @@ var map;
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
 				scrollwheel: false,
 				zoom: map_zoom,
-				styles: style
+				//styles: style
 			}
 
 	        map = new google.maps.Map(document.getElementById('maps'), map_options);

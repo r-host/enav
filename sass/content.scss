@@ -82,6 +82,40 @@ a.active {
     color: $color_1;
 }
 
+/* Reset Material*/
+.form-group.is-focused label,
+.form-group.is-focused label.control-label {
+  color: $color_1;
+}
+.form-group.is-focused .form-control {
+  outline: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($color_1), to($color_1)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+  background-image: -webkit-linear-gradient($color_1, $color_1), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -o-linear-gradient($color_1, $color_1), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient($color_1, $color_1), linear-gradient(#D2D2D2, #D2D2D2);
+  -webkit-background-size: 100% 2px, 100% 1px;
+          background-size: 100% 2px, 100% 1px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.6);
+
+}
+.modal-open .main-wrap{
+  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+  -webkit-filter:blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter:blur(5px);
+}
+
+/* end */
+
 .main-wrap{
 	position: relative;
 	width: 360px;
@@ -102,10 +136,9 @@ a.active {
 	    background-color: $color_2 !important;
     }
 }
-
 .ebtn{
 	@include border-radius(0);
-    background-color: #fff;
+    background-color: #fff !important;
     font-size: 14px;
     height: $lebar;
     margin: auto;
@@ -115,10 +148,9 @@ a.active {
     overflow: hidden;
     -webkit-box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.24);
     box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.24);
-    line-height: normal;
+    line-height: 2.2;
     text-align: center;
     cursor: pointer;
-    padding-top: 5px;
 }
 .left-btn{
 	position: absolute;
@@ -186,15 +218,19 @@ a.active {
     -webkit-box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.24);
     box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.24);
     position: relative;
-    line-height: normal;
+    line-height: 1.4;
     color: #fff !important;
+    &:hover{
+    	background-color: darken($color_1, 5%) !important;
+    }
     &:focus{
-    	background-color: #fff;
+    	background-color: #fff !important;
     }
 }
 .btn.btn-main{
 	@include border-radius(0);
     @extend .btn-orange;
+    line-height: 1.7;
     &:focus{
     	background-color: $color_1 !important;
     }

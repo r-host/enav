@@ -376,6 +376,36 @@ a, a:focus, a:hover {
 a.active {
   color: #ff9501; }
 
+/* Reset Material*/
+.form-group.is-focused label,
+.form-group.is-focused label.control-label {
+  color: #ff9501; }
+
+.form-group.is-focused .form-control {
+  outline: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9501), to(#ff9501)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+  background-image: -webkit-linear-gradient(#ff9501, #ff9501), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -o-linear-gradient(#ff9501, #ff9501), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#ff9501, #ff9501), linear-gradient(#D2D2D2, #D2D2D2);
+  -webkit-background-size: 100% 2px, 100% 1px;
+  background-size: 100% 2px, 100% 1px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.6); }
+
+.modal-open .main-wrap {
+  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+  -webkit-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px); }
+
+/* end */
 .main-wrap {
   position: relative;
   width: 360px;
@@ -401,7 +431,7 @@ a.active {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
-  background-color: #fff;
+  background-color: #fff !important;
   font-size: 14px;
   height: 30px;
   margin: auto;
@@ -411,10 +441,9 @@ a.active {
   overflow: hidden;
   -webkit-box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
-  line-height: normal;
+  line-height: 2.2;
   text-align: center;
-  cursor: pointer;
-  padding-top: 5px; }
+  cursor: pointer; }
 
 .left-btn {
   position: absolute;
@@ -478,16 +507,19 @@ a.active {
   -webkit-box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
   position: relative;
-  line-height: normal;
+  line-height: 1.4;
   color: #fff !important; }
+  .btn-orange:hover, .btn.btn-main:hover, .dropdown-menu > li .enav:hover {
+    background-color: #e78600 !important; }
   .btn-orange:focus, .btn.btn-main:focus, .dropdown-menu > li .enav:focus {
-    background-color: #fff; }
+    background-color: #fff !important; }
 
 .btn.btn-main {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  line-height: 1.7; }
   .btn.btn-main:focus {
     background-color: #ff9501 !important; }
 
